@@ -8,10 +8,11 @@
 </head>
 <body>
     <p>hello, world</p>
-    <form action="/submit" method="post">
-        <input type="text" name="name" placeholder="Your Name">
+    <form action="/" method="post">
+        <input type="text" name="name" placeholder="Your Name" value="<%= name %>">
         <div class="h-captcha" data-sitekey="845c9541-f7b4-4f87-844c-68abc9d3a085"></div>
-        <input type="submit" name="submit" value="submit">
+        <p style="color: red; display: <%= display %>">Validation failed!</p>
+        <input type="submit" name="submit" value="submit" style="display: block">
     </form>
 </body>
 </html>
