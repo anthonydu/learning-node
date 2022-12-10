@@ -18,11 +18,6 @@ app.get("/", (req, res) => {
     renderIndex(res, { name : "" , display : "none"});
 })
 
-
-app.listen(PORT, "test.anthonydu.com", () => {
-    console.log(`Live on http://test.anthonydu.com:${PORT}`);
-});
-
 app.use(express.urlencoded({ extended: false }));
 
 app.post('/', (req, res) => {
