@@ -4,7 +4,6 @@ const { verify } = require('hcaptcha');
 const ejs = require('ejs');
                     
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 const renderIndex = (res, data) => {
     ejs.renderFile("index.ejs", data, (err, data) => {
