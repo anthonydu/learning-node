@@ -14,10 +14,6 @@ app.get("/", (req, res) => {
     });
 })
 
-app.listen(PORT, () => {
-    console.log(`Live on http://localhost:${PORT}`);
-});
-
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 app.post('/submit', async (req, res) => {
