@@ -5,6 +5,14 @@ const ejs = require('ejs');
                     
 const app = express();
 
+/*
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "test.anthonydu.com", () => {
+    console.log(`Live on http://test.anthonydu.com:${PORT}`);
+});
+*/
+
 const renderIndex = (res, data) => {
     ejs.renderFile("index.ejs", data, (err, data) => {
         if (err) res.status(500).send("Server error: cannot read file.");
@@ -14,9 +22,7 @@ const renderIndex = (res, data) => {
 }
 
 app.get("/", (req, res) => {
-    console.log("getting /");
     renderIndex(res, { name : "" , display : "none"});
-    console.log("renderIndex complete");
 })
 
 app.use(express.urlencoded({ extended: false }));
