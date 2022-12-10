@@ -15,7 +15,9 @@ const renderIndex = (res, data) => {
 }
 
 app.get("/", (req, res) => {
+    console.log("getting /");
     renderIndex(res, { name : "" , display : "none"});
+    console.log("renderIndex complete");
 })
 
 app.use(express.urlencoded({ extended: false }));
